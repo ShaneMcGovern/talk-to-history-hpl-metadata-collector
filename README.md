@@ -1,9 +1,10 @@
 # Talk to History: H.P. Lovecraft Brown Metadata Collector
 
-[![Python](https://img.shields.io/badge/python-3.11-blue.svg)](https://www.python.org/downloads/)
+[![Coverage Status](./reports/coverage/coverage-badge.svg?dummy=8484744)](./reports/coverage/index.html)
+<!-- [![Python](https://img.shields.io/badge/python-3.11-blue.svg)](https://www.python.org/downloads/)
 [![uv](https://img.shields.io/badge/uv-package%20manager-green.svg)](https://github.com/astral-sh/uv)
 [![Code style: Ruff](https://img.shields.io/badge/code%20style-ruff-000000.svg)](https://github.com/astral-sh/ruff)
-[![License: Public Domain](https://img.shields.io/badge/License-Public%20Domain-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
+[![License: Public Domain](https://img.shields.io/badge/License-Public%20Domain-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/) -->
 
 Automated metadata harvesting tool for H.P. Lovecraft's correspondence collection at Brown University's John Hay Library. Retrieves and saves structured metadata for public domain letters and manuscripts through the Brown Digital Repository API.
 
