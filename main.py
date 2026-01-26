@@ -1,8 +1,8 @@
-import src.example as example
+import src.collector as collector
 
 
 def main():
-    example.main()
+    collector.main()
 
 
 if __name__ == "__main__":
