@@ -1,12 +1,17 @@
 ---
 repos:
   - repo: https://github.com/pre-commit/mirrors-prettier
-    rev: v3.1.0
+    rev: v4.0.0-alpha.8
     hooks:
       - id: prettier
         types_or: [yaml, json, toml]
+  - repo: https://github.com/jackdewinter/pymarkdown
+    rev: v0.9.35
+    hooks:
+      - id: pymarkdown
+        args: [fix]
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.14.11
+    rev: v0.14.14
     hooks:
       - id: ruff-check
         args: [--fix]
@@ -20,3 +25,7 @@ repos:
         types: [python]
         pass_filenames: false
         always_run: true
+  - repo: https://github.com/Weird-Sheep-Labs/coverage-pre-commit
+    rev: 0.1.1
+    hooks:
+      - id: coverage-badge

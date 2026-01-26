@@ -29,6 +29,9 @@ jobs:
       - name: Run tests
         run: uv run pytest
 
+      - name: Generate coverage badge
+        run: uv run genbadge coverage -o reports/coverage/coverage-badge.svg
+
   release:
     name: Release
     runs-on: ubuntu-latest
