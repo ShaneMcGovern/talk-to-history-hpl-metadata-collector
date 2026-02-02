@@ -10,7 +10,6 @@
   ([#4](https://github.com/ShaneMcGovern/talk-to-history-hpl-brown-metadata/pull/4),
   [`04ac7d6`](https://github.com/ShaneMcGovern/talk-to-history-hpl-brown-metadata/commit/04ac7d61bc3414132d027d6b14276273cb423133))
 
-
 ## v1.2.1 (2026-01-26)
 
 ### Bug Fixes

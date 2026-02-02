@@ -23,7 +23,6 @@ class Collection(Enum):
     HOWARD_P_LOVECRAFT_COLLECTION = "bdr:jyhg75bu"
 
 
-# Genre types to search for in the collection
 GENRES = [
     "autograph letter",
     "autograph letter signed",
@@ -32,11 +31,31 @@ GENRES = [
     "typed letter signed",
 ]
 
-# API configuration
 BASE_URL = "https://repository.library.brown.edu/api/search/"
 PAGE_SIZE = 100
 MIN_PAUSE_SECONDS = 1
 MAX_PAUSE_SECONDS = 2
+
+CREATOR_NAME = "Lovecraft, H.P. (Howard Phillips)"
+
+
+def has_single_matching_creator(doc: dict, creator_name: str) -> bool:
+    """
+    Check if document has exactly one creator matching the given name.
+
+    Args:
+        doc: Document dictionary
+        creator_name: Expected creator name
+
+    Returns:
+        True if document has single matching creator, False otherwise
+    """
+    creators = doc.get("creator")
+
+    if not isinstance(creators, list):
+        return False
+
+    return len(creators) == 1 and creators[0] == creator_name
 
 
 def save_document(doc: dict, output_dir: str = "./metadata") -> str:
@@ -107,7 +126,13 @@ def fetch_and_save_documents(genre):
                     break
 
                 for doc in docs:
-                    save_document(doc)
+                    if has_single_matching_creator(doc, CREATOR_NAME):
+                        save_document(doc)
+                    else:
+                        logger.debug(
+                            f"Skipping doc {doc.get('pid', 'unknown')}: "
+                            f"creator={doc.get('creator')}"
+                        )
 
                 # Pause to avoid overwhelming the server
                 pause = MIN_PAUSE_SECONDS + random.random() * (

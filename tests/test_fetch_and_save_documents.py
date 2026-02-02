@@ -13,10 +13,16 @@ def test_fetch_and_save_documents_success(mock_get, mock_save):
     """Test that documents are fetched and saved with pagination."""
     page1 = MagicMock(status_code=200)
     page1.json.return_value = {
-        "response": {"docs": [{"pid": "bdr:1"}, {"pid": "bdr:2"}]}
+        "response": {
+            "docs": [
+                {"pid": "bdr:1", "creator": ["Lovecraft, H.P. (Howard Phillips)"]},
+                {"pid": "bdr:2", "creator": ["Lovecraft, H.P. (Howard Phillips)"]},
+            ]
+        }
     }
     empty = MagicMock(status_code=200)
     empty.json.return_value = {"response": {"docs": []}}
+    # Simulate pagination: first page returns docs, second returns empty
     mock_get.side_effect = [page1, empty]
 
     fetch_and_save_documents("autograph letter")
