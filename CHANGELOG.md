@@ -1,7 +1,17 @@
 # CHANGELOG
 
 <!-- markdownlint-disable-file MD024 -->
+
 <!-- version list -->
+
+## v1.4.0 (2026-02-07)
+
+### Features
+
+- Disable markdownlint for changelog
+  ([#6](https://github.com/ShaneMcGovern/talk-to-history-hpl-metadata-collector/pull/6),
+  [`e78d230`](https://github.com/ShaneMcGovern/talk-to-history-hpl-metadata-collector/commit/e78d230f9056cf716fd7604d7521060bb5d561e0))
+
 
 ## v1.3.0 (2026-02-07)
 
