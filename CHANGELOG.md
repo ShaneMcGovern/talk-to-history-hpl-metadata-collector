@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v1.3.0 (2026-02-07)
+
+### Features
+
+- Comments for non-obvious test case
+  ([#5](https://github.com/ShaneMcGovern/talk-to-history-hpl-brown-metadata/pull/5),
+  [`5099270`](https://github.com/ShaneMcGovern/talk-to-history-hpl-brown-metadata/commit/5099270ed31d9754e56bd254d8fec84cfa96f354))
+
+
 ## v1.2.2 (2026-01-26)
 
 ### Bug Fixes
