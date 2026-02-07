@@ -1,7 +1,7 @@
 [project]
-name = "talk-to-history-hpl-brown-metadata"
+name = "talk-to-history-hpl-metadata-collector"
 version = "1.0.0"
-description = "Add your description here"
+description = "Automated metadata collector for H.P. Lovecraft's public domain correspondence from Brown University's Digital Repository."
 readme = "README.md"
 requires-python = "~=3.11.0"
 dependencies = [

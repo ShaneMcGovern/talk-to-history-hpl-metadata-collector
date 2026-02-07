@@ -326,7 +326,7 @@ wheels = [
 ]
 
 [[package]]
-name = "talk-to-history-hpl-brown-metadata"
+name = "talk-to-history-hpl-metadata-collector"
 version = "1.0.0"
 source = { virtual = "." }
 dependencies = [
